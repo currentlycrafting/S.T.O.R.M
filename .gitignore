@@ -1,0 +1,31 @@
+# Node / React frontend
+STORM_Frontend/node_modules/
+STORM_Frontend/build/
+STORM_Frontend/.env
+
+# C++ backend build
+STORM_Backend/build/
+STORM_Backend/*.o
+STORM_Backend/*.so
+STORM_Backend/*.exe
+STORM_Backend/*.out
+
+# Proto generated files (optional if you generate locally)
+# STORM_Frontend/src/proto/*.js
+# STORM_Backend/src/proto/*.pb.cc
+# STORM_Backend/src/proto/*.pb.h
+# STORM_Backend/src/proto/*.grpc.pb.cc
+# STORM_Backend/src/proto/*.grpc.pb.h
+
+# Docker
+*.log
+*.pid
+*.tmp
+.docker/
+docker-compose.override.yml
+
+# OS / IDE files
+.DS_Store
+.vscode/
+.idea/
+*.swp
