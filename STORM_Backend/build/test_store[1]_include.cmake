@@ -1,0 +1,5 @@
+if(EXISTS "/Users/someoneguy/Desktop/STORM_Project/storm_backend/build/test_store[1]_tests.cmake")
+  include("/Users/someoneguy/Desktop/STORM_Project/storm_backend/build/test_store[1]_tests.cmake")
+else()
+  add_test(test_store_NOT_BUILT test_store_NOT_BUILT)
+endif()

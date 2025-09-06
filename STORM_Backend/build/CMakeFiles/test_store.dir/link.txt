@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_store.dir/tests/test_store.cpp.o CMakeFiles/test_store.dir/src/store.cpp.o -o test_store  -lpthread /opt/homebrew/lib/libgtest_main.a /opt/homebrew/lib/libgtest.a
