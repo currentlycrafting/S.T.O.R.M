@@ -1,42 +1,39 @@
-Of course. Here is the provided text formatted as a GitHub `README.md` file.
-
-````markdown
 # S.T.O.R.M – Scalable, Thread-Safe, Orchestrated, Replicated Memory-store
 
-S.T.O.R.M is a high-performance, in-memory key-value store implemented in C++17. It supports sharded LRU eviction, thread-safe operations, and batch writes, making it ideal for high-concurrency workloads.
+S.T.O.R.M is a **high-performance, in-memory key-value store** implemented in C++17. It is designed for **high-concurrency workloads**, supporting sharded LRU eviction, thread-safe operations, batch writes, and an interactive CLI interface. Ideal for applications requiring fast, scalable memory storage.
 
 ---
 
-### Tech Stack
+## Tech Stack
 
-* **Language**: C++17
-* **Testing**: GoogleTest
-* **Build**: CMake
-* **Containerization**: Docker (Ubuntu 22.04 base)
-
----
-
-### Features
-
-* **Thread-Safe Operations**: Individual shards are protected by `std::mutex` to minimize lock contention. It supports multi-threaded `PUT`, `GET`, and `DEL` operations.
-* **Sharding**: Keys are distributed across multiple shards to reduce bottlenecks. Each shard has independent LRU eviction and capacity control.
-* **LRU Eviction**: Automatically removes the least recently used entries when a shard reaches its capacity.
-* **Batch Operations**: Supports `putMany` for efficient batch writes, which significantly reduces lock overhead.
-* **CLI Interface**: An interactive command-line tool with commands: `PUT`, `GET`, `DEL`, `LIST`, `CLEAR`, `HISTORY`, `HELP`, and `EXIT`.
-* **High-Concurrency Stress Testing**: Supports 100+ threads performing millions of operations, ensuring reliability under heavy load.
+- **Language:** C++17  
+- **Testing:** GoogleTest  
+- **Build System:** CMake  
+- **Containerization:** Docker (Ubuntu 22.04 base)
 
 ---
 
-### Getting Started
+## Features
 
-#### Clone the repository
+- **Thread-Safe Operations:** Each shard uses `std::mutex` to minimize lock contention for multi-threaded `PUT`, `GET`, and `DEL` operations.  
+- **Sharding:** Keys are distributed across multiple shards to reduce bottlenecks, with independent LRU eviction per shard.  
+- **LRU Eviction:** Automatically removes the least recently used entries when a shard reaches capacity.  
+- **Batch Operations:** Supports `putMany` for efficient batch writes, reducing lock overhead.  
+- **CLI Interface:** Interactive command-line tool with commands: `PUT`, `GET`, `DEL`, `LIST`, `CLEAR`, `HISTORY`, `HELP`, and `EXIT`.  
+- **High-Concurrency Testing:** Designed to handle 100+ threads performing millions of operations reliably.
+
+---
+
+## Getting Started
+
+### Clone the Repository
 
 ```bash
-git clone [https://github.com/yourusername/storm.git](https://github.com/yourusername/storm.git)
+git clone https://github.com/yourusername/storm.git
 cd storm
-````
+```
 
-#### Build Locally
+### Build Locally
 
 ```bash
 mkdir build
@@ -45,13 +42,13 @@ cmake ..
 make
 ```
 
-#### Run CLI
+### Run CLI
 
 ```bash
 ./server
 ```
 
-#### Docker Usage
+### Docker Usage
 
 **Build Docker Image**
 
@@ -65,9 +62,9 @@ docker build -t storm-store .
 docker run -it --rm storm-store
 ```
 
------
+---
 
-### Example CLI Commands
+## Example CLI Commands
 
 ```bash
 > PUT foo bar
@@ -86,9 +83,9 @@ docker run -it --rm storm-store
 { "history": ["PUT foo bar", "GET foo", "LIST", "DEL foo"] }
 ```
 
------
+---
 
-### Testing
+## Testing
 
 Run all unit tests with GoogleTest:
 
@@ -100,15 +97,21 @@ make
 ./tests
 ```
 
------
+---
 
-### Contributing
+## Contributing
 
-  * Use descriptive variable names, proper indentation, and clear comments.
-  * Follow `@brief` comment style for all new functions.
-  * Ensure thread-safety for all new operations.
+- Follow **clean coding practices**: descriptive variable names, consistent indentation, and clear comments.  
+- Use `@brief` comment style for new functions.  
+- Ensure **thread-safety** in all new operations.  
+- Submit pull requests with clear descriptions and maintain compatibility with existing tests.
 
------
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
 
 ### License
 
