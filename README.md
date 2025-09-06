@@ -24,6 +24,45 @@ S.T.O.R.M is a **high-performance, in-memory key-value store** implemented in C+
 
 ---
 
+
+## 📊 Performance Metrics
+
+**Test Configuration:**
+
+| Parameter | Value |
+|-----------|-------|
+| Number of Shards | 30 |
+| Shard Capacity | 4,000 keys |
+| Threads | 350 |
+| Ops per Thread | 300,000 |
+| Total Ops | 105,000,000 |
+| Runtime | ~75 seconds |
+| Throughput | ~1.39M ops/sec |
+
+**Interpretation:**
+
+- High throughput demonstrates effective **sharding** and **mutex-per-shard** design.  
+- LRU eviction works correctly under heavy load.  
+- Recency updates are accurate on both `GET` and `PUT`.
+
+**Performance Graph (Ops/sec vs Threads)**
+
+Ops/sec
+^
+|               █████
+|            ████████
+|         ███████████
+|      ███████████████
+|____________________________> Threads
+
+## Stress-test
+
+[==========] Running 8 tests from 1 test suite.
+[ RUN      ] StoreTest.ConcurrencyStress
+[       OK ] StoreTest.ConcurrencyStress (75501 ms)
+[  PASSED  ] 8 tests.
+
+
 ## Getting Started
 
 ### Clone the Repository
@@ -108,5 +147,4 @@ make
 
 ---
 
-```
 ```
