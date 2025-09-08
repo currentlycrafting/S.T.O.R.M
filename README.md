@@ -50,14 +50,6 @@ S.T.O.R.M is a **high-performance, in-memory key-value store** implemented in C+
 <img width="1221" height="864" alt="Screenshot 2025-09-06 at 5 05 04 PM" src="https://github.com/user-attachments/assets/20b7a031-2b62-410c-b2a9-78ae79be1c1e" />
 
 
-## Stress-test
-
-[==========] Running 8 tests from 1 test suite.
-[ RUN      ] StoreTest.ConcurrencyStress
-[       OK ] StoreTest.ConcurrencyStress (75501 ms)
-[  PASSED  ] 8 tests.
-
-
 ## Getting Started
 
 ### Clone the Repository
