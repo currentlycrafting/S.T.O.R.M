@@ -47,13 +47,8 @@ S.T.O.R.M is a **high-performance, in-memory key-value store** implemented in C+
 
 **Performance Graph (Ops/sec vs Threads)**
 
-Ops/sec
-^
-|               █████
-|            ████████
-|         ███████████
-|      ███████████████
-|____________________________> Threads
+<img width="1221" height="864" alt="Screenshot 2025-09-06 at 5 05 04 PM" src="https://github.com/user-attachments/assets/20b7a031-2b62-410c-b2a9-78ae79be1c1e" />
+
 
 ## Stress-test
 
